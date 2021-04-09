@@ -1,0 +1,104 @@
+@import "../../Styles/color.scss";
+
+.navbar {
+  height: $nav-size;
+  background-color: $background-primary;
+  padding: 0 1rem;
+  border-bottom: $border;
+  .navbar_nav {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    li {
+      width: calc($nav-size * 0.8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      .icon_button {
+        // $button-size: calc($nav-size * 0.5);
+        // width: $button-size;
+        // height: $button-size;
+        background-color: $bg;
+        border-radius: 50%;
+        padding: 5px;
+        margin: 2px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: filter 300ms;
+        svg {
+          fill: $text-color;
+          width: 20px;
+          height: 20px;
+        }
+      }
+      .icon_button:hover {
+        filter: brightness(1.15);
+      }
+    }
+    .dropdown {
+      position: absolute;
+      top: 58px;
+      width: 300px;
+      transform: translateX(-45%);
+      background-color: $bg;
+      border: $border;
+      border-radius: $border-radius;
+      padding: 1rem;
+      padding-bottom: 2rem;
+      overflow: hidden;
+      transition: height $speed ease;
+      .menu {
+        list-style: none;
+        width: 100%;
+        font-family: "Montserrat";
+
+        .menu_item {
+          height: 50px;
+          display: flex;
+          align-items: center;
+          border-radius: $border-radius;
+          transition: background $speed;
+          padding: 0.5rem;
+          // margin: 0.5rem;
+          .icon_right {
+            margin-left: auto;
+          }
+        }
+        .menu_item:hover {
+          background-color: #525357;
+        }
+      }
+      .menu-primary-enter {
+        position: absolute;
+        transform: translateX(-110%);
+      }
+      .menu-primary-enter-active {
+        transform: translateX(0%);
+        transition: all $speed ease;
+      }
+      .menu-primary-exit {
+        position: absolute;
+      }
+      .menu-primary-exit-active {
+        transform: translateX(-110%);
+        transition: all $speed ease;
+      }
+      .menu-secondary-enter {
+        position: absolute;
+        transform: translateX(110%);
+      }
+      .menu-secondary-enter-active {
+        transform: translateX(0%);
+        transition: all $speed ease;
+      }
+      .menu-secondary-exit {
+      }
+      .menu-secondary-exit-active {
+        transform: translateX(110%);
+        transition: all $speed ease;
+      }
+    }
+  }
+}

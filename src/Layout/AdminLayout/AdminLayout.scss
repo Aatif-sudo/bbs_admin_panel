@@ -1,0 +1,18 @@
+.app {
+  background-color: lightblue;
+  display: flex;
+  width: 100%;
+  .sidebar_container {
+    width: 15.3rem;
+    background-color: blue;
+    position: relative;
+  }
+  // .sidebar_container:hover {
+  //   width: 18rem;
+  // }
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}

@@ -1,0 +1,61 @@
+@import "../../Styles/color.scss";
+
+.sidebar {
+  background-color: #222831;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 13rem;
+  list-style: none;
+  align-items: center;
+  flex-direction: column;
+  transition: width 300ms ease;
+  padding: 0 25px;
+  .logo {
+    font-family: "Audiowide";
+    height: $nav-size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h1 {
+      color: grey;
+      letter-spacing: 2px;
+      transition: all $speed ease;
+    }
+    h1:hover {
+      letter-spacing: 6px;
+      color: rgb(219, 112, 112);
+    }
+  }
+  .sidebar_links {
+    padding: 25px 0;
+    margin: 2rem auto;
+    width: 100%;
+    font-family: "Montserrat";
+    .sidebar_item {
+      a {
+        display: flex;
+        align-items: center;
+        min-height: 3rem;
+        width: 100%;
+        font-size: 1rem;
+        font-weight: 500;
+        .svg {
+          margin-right: 5px;
+        }
+        span {
+          margin-left: 5px;
+        }
+      }
+    }
+    .sidebar_item:hover {
+      color: pink;
+    }
+  }
+}
+
+// .sidebar:hover {
+//   width: 10rem;
+// }
